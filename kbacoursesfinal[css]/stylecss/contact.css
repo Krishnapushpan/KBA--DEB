@@ -1,0 +1,81 @@
+.div2 a{
+    color: #4d1b61;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 13px;
+    position: relative;
+    left: 750px;
+    background-color: rgb(255, 255, 255);
+    height: 170px;
+    width:700px;
+    font-family: Arial, Helvetica, sans-serif;
+     
+}
+.div2{
+    margin-top: 20px;
+}
+nav{
+    display: flex;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 8px rgb(198, 203, 207);
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+body{
+    background-color: rgb(233, 200, 233);
+    margin: 0;
+    padding: 0;
+}
+
+ h3{
+    color: purple;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+ }
+ h1{
+    text-align: center;
+ }
+ .pfirst{
+    color:DarkSlateGray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+ }
+
+ .main
+ {    
+    display: flex;
+ }
+ .submain
+ {
+    margin-left: 150px;
+ }
+ .psec {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: gray;
+ }
+ h2{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+ }
+ .pthird
+ {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(173, 108, 199);
+ }
+.img1
+{
+    margin-left: 85px;
+}
+.img2
+{
+    margin-left: 120px;
+}
+.img3
+{
+    margin-left: 60px;
+}
+ 

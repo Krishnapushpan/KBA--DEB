@@ -1,6 +1,33 @@
 body{
-    background-color: rgb(212, 173, 248);
-    }
+    background-color: rgb(233, 200, 233);
+    margin: 0;
+    padding: 0;
+}
+.div2 a{
+    color: #4d1b61;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 13px;
+    position: relative;
+    left: 750px;
+    background-color: rgb(255, 255, 255);
+    height: 170px;
+    width:700px;
+    font-family: Arial, Helvetica, sans-serif;
+     
+}
+.div2{
+    margin-top: 20px;
+}
+nav{
+    display: flex;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 8px rgb(198, 203, 207);
+}
+img{
+    width: 60px;
+    height: 60px;
+}
     .container{
     width: 400px;
     height: 530px;
@@ -55,26 +82,3 @@ body{
     width: 330px;
     border-radius: 14px;
     }
-    .nav{
-        text-decoration: none;
-        float: inline-end;
-        padding-left: 30px;
-        padding-top: 12px;
-        font-size: 20px;
-        margin-right: 30px;
-    
-    }
-    nav{
-        height: 50px;
-     background-color: #fdfdfd;
-     border-radius: 2px;
-    
-    }
-  /*  .nav:hover{
-        background-color: #21618c;
-        color: white;
-        border-radius: 20px;
-        padding-left: 20px;
-        padding-top: 12px;
-    
-    }*/

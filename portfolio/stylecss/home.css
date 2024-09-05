@@ -1,0 +1,22 @@
+.nav{
+    text-decoration: none;
+    float: inline-end;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-size: 25px;
+
+}
+nav{
+    height: 60px;
+ background-color: #a3e4d7;
+ border-radius: 25px;
+
+}
+.nav:hover{
+    background-color: #21618c;
+    color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 12px;
+
+}
