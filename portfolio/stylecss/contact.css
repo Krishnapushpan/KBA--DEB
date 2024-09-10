@@ -1,0 +1,172 @@
+body{
+    background-image: url("/bg.avif");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+.name{
+    color: white;
+    padding-left: 16px;
+    font-size: 48px;
+    margin-right: 70px;
+    margin-top: 10px;
+}
+.subheading {
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400px;
+    font-style:normal;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+
+  }
+  
+  .subheading1 {
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400px;
+    font-style:normal;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+  }
+/* navbar Starting */
+.nava{
+    text-decoration: none;
+    color: white;
+  display:inline-flex;
+    padding-left: 16px;
+    padding-top: 1px;
+    font-size: 15px;
+    margin-right: 70px;
+}
+.divnav{
+    margin-left: 540px;
+    margin-top: -85px;
+}
+.nav{
+    height: 50px;
+    background: rgba(245, 239, 239, 0.2);
+    backdrop-filter:blur(2px) ;
+    border-radius: 20px;
+    position: sticky;
+    top: 20px;
+}
+/* navbar ending */
+/* div of message  starting*/
+.msg{
+    width: 510px;
+    height: 570px;
+    border-radius: 15px;
+    background-color: rgba(199, 216, 235, 0.2); 
+    backdrop-filter: blur(21px); 
+    line-height: 40px;
+ 
+}
+h1{
+    color:white;
+    text-align: center;
+    padding-top: 7px;
+}
+label{
+    margin-left: 50px;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 330px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.insert{
+    margin-left: 50px;
+    height: 30px;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+.insert:hover{
+    background-color: rgb(224, 236, 247);
+    height:35px ;
+    border: 2px solid  rgb(224, 236, 247);
+}
+
+textarea{
+    margin-left: 50px;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 12px; 
+  
+}
+textarea:hover{
+        background-color: rgb(224, 236, 247);
+        height:200px ;
+        border: 2px solid  rgb(224, 236, 247);
+    }
+::placeholder{
+    font-size:15px ;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.button1{
+    margin-left: 50px;
+    height: 35px;
+    width: 410px;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: rgb(12, 12, 75);
+}
+.button1:hover{
+    background-color: rgb(28, 124, 212);
+    color: white;
+    height: 40px;
+    border-color: rgb(28, 124, 212);
+}
+/* div of message  ending*/
+
+/* div of address starting */
+.con{
+
+    width: 510px;
+    height: 570px;
+    border-radius: 15px;
+    background-color: rgba(199, 216, 235, 0.2); 
+    backdrop-filter: blur(25px); 
+    line-height: 35px;
+}
+.icon{
+    height: 50px;
+    margin-left: 190px;
+    margin-top: 18px;
+    width: 50px;
+    align-items: center;
+}
+.subcon{
+    margin-top: 10px;
+    margin-left: 40px;
+
+}
+/* div of address ending */
+/* address and contact div main */
+.main{
+    display: flex;
+    margin-left: 35px;
+}
+.con, .msg{
+    margin-left: 50px;
+}
+.sub{
+    margin-top: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    padding: 20px;
+    margin-left: 40px;
+    
+}
+.sub3{
+    margin-top: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    padding: 10px;
+    margin-left: 125px;
+}
+
+

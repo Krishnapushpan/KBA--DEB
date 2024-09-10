@@ -1,0 +1,87 @@
+body{
+    background-image: url("/bg.avif");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+.name{
+    color: white;
+    padding-left: 16px;
+    font-size: 48px;
+    margin-right: 70px;
+    margin-top: 10px;
+}
+.subheading {
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400px;
+    font-style:normal;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+
+  }
+  .subheading1 {
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400px;
+    font-style:normal;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+  }
+
+/* navbar Starting */
+.nava{
+    text-decoration: none;
+    color: white;
+  display:inline-flex;
+    padding-left: 16px;
+    padding-top: 1px;
+    font-size: 15px;
+    margin-right: 70px;
+}
+.divnav{
+    margin-left: 540px;
+    margin-top: -85px;
+}
+.nav{
+    height: 50px;
+    background: rgba(245, 239, 239, 0.2);
+    backdrop-filter:blur(2px) ;
+    /* border-radius: 20px; */
+    position: sticky;
+    top: 20px;
+}
+/* navbar ending */
+/* main div starting */
+.main{
+    width: 1200px;
+    height: 700px;
+    border-radius: 18px;
+    background-color: rgba(245, 239, 239, 0.2); 
+    backdrop-filter: blur(11px); 
+    line-height: 40px;
+    margin-left: 40px;
+}
+/* main div ending */
+.subp{
+    font-size: 20px;
+    color: white;
+    padding: -7px;
+    margin-left: 150px;
+}
+.subh2{
+    color: white;
+    padding: -19px;
+    margin-left: 70px;
+    background-color: #7b829c;
+    backdrop-filter: blur(22px);
+    /* border-radius: 14px; */
+
+}
+.subh2:hover{
+
+    color: #283747  ;
+    background-color: white;
+    /* border-radius: 14px; */
+}
