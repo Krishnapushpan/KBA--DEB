@@ -1,0 +1,9 @@
+div{
+    text-align: center;
+    background-color: rgb(48, 158, 248);
+}
+.textStyle{
+  color: blue;
+  font-size: 30px;
+  text-decoration: underline;
+}
