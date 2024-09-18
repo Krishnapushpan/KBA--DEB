@@ -1,0 +1,72 @@
+body{
+    background-image: url("/lib.jpg");
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainav{
+    display: flex;
+}
+.first{
+    display: flex;
+}
+.liara{
+        font-family: "WindSong", cursive;
+        font-weight:bolder;
+        font-style:normal;
+        color:whitesmoke;
+        font-size: 70px;
+        margin-top: 10px;
+      }
+      .sec{
+        font-family: "WindSong", cursive;
+        font-weight:bolder;
+        color:whitesmoke;
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 50px;
+
+      }
+.divnav{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+      nav a{
+  
+        text-decoration: none;
+        color: whitesmoke;
+      
+        font-size: 20px;
+        margin-left: 30px;
+        font-weight: bolder;
+      }
+      nav a:hover{
+      color: rgb(224, 151, 124);
+
+      }
+      .input{
+        height: 40px;
+        width: 500px;
+        border: 2px solid whitesmoke;
+        border-radius: 42px;
+        margin-left: 400px;
+
+      }
+      /* .indiv{
+color: brown;
+      } */
+      .input:hover{
+        background-color: rgb(223, 222, 179);
+        border: 2px solid whitesmoke;
+      }
+.qu{ 
+     font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 5px;
+
+}
