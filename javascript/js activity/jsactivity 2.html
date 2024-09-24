@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log("hello")
+        let x;
+        x=5;
+        let y=10;
+        document.write("Program to swap two numbers using a temporary variable <br><br>");
+         document.write("the first number = ", x ,"<br>");
+         document.write("the second number = ", y, "<br>");
+
+         let swap;
+         swap=x;
+         x=y;
+         y=swap;
+
+         document.write("<br>after swapping <br> <br>");
+         document.write("the first number = ", x, "<br>");
+         document.write("the second number = ", y, "<br><br>");
+
+
+         let a=15;
+        let b=10;
+        document.write("Program to swap two numbers using a temporary variable <br><br>")
+         document.write("the first number = ", a ,"<br>");
+         document.write("the second number = ", b, "<br>");
+            a=a+b;  //15=15+10=25
+            b=a-b;  //10=25-10=15
+            a=a-b;  //25=25-15=10
+
+         document.write("<br>after swapping <br> <br>");
+         document.write("the first number = ", a, "<br>");
+         document.write("the second number = ", b, "<br><br>");
+
+         document.write("Program to convert Celsius to fahrenheit <br>")
+         let temp=40
+         document.write("temperature: ",temp,"<br>")
+         function ctof( temp ) {
+    return (temp * 9 / 5) + 32;
+}
+let con= ctof( temp )
+document.write("the value of convert Celsius to fahrenheit =" ,con,"<br>")
+
+         document.write("Program to find square and cube of a number <br><br>");
+         let c=4;
+         document.write("the number = ", c ,"<br>");
+         s=c*c;
+         t=c*c*c;
+         document.write("Square of the number = ", s ,"<br>");
+         document.write("cube of the number = ", t ,"<br> <br>");
+
+         function squareperi(side){
+            return side*4;
+         }
+         function squarearea(side){
+            return side*side;
+         }
+         function circlearea(radius){
+            return 3.14 * radius * radius;
+         }
+         function circleperi(radius){
+            return 2 * 3.14 * radius ;
+         }
+         function trianglearea(side1, side2 ,side3){
+            return (side1+side2+side3)/2;
+         }
+         function triangleperi(side1, side2 ,side3){
+            return side1+side2+side3;
+         }
+         function rectarea(length, width){
+            return length*width;
+         }  
+         function rectperi(length, width){
+            return (length+width)*2;
+         }  
+         document.write("Program to find area and perimeter of square, circle, rectangle, triangle<br> <br>")
+        let side=4;
+        let side1=6;
+        let side2=8
+        let side3=12
+        let radius=5
+        let length=8
+        let width=12
+        let area1=squarearea(side);
+        document.write("Area of a square =" ,area1,"<br>")
+        let area2=circlearea(radius);
+        document.write("Area of a circle =" ,area2,"<br>") 
+        let area3=trianglearea(side1, side2, side3);
+        document.write("Area of a triangle =" ,area3,"<br>") 
+        let area4=rectarea(length, width);
+        document.write("Area of a rectangle =" ,area4,"<br>")
+        let peri1=squareperi(side);
+        document.write("perimeter of a square =" ,peri1,"<br>")
+        let peri2=circleperi(radius);
+        document.write("perimeter of a circle =" ,peri2,"<br>") 
+        let peri3=triangleperi(side1, side2, side3);
+        document.write("perimeter of a triangle =" ,peri3,"<br>") 
+        let peri4=rectperi(length, width);
+        document.write("perimeter of a rectangle =" ,peri4,"<br><br><br>")
+
+        document.write("Program to find simple interest & compound interest<br><br>")
+        let prin=1000
+        let rate=2
+        let time=2
+        function sim(prin, rate, time)
+        {
+            return (prin * rate * time)/100;
+        }
+        function com(prin, rate, time)
+        {
+            return prin *(Math.pow((1 + rate / 100), time)-prin);
+        }
+        let simple=sim(prin, rate, time);
+        document.write("simple interest =" ,simple,"<br>")
+        let compound=com(prin, rate, time)
+        document.write("compound interest =" ,compound,"<br>")
+
+        document.write("Program to find largest among two numbers<br><br><br>")
+        let n1=4
+        let n2=8
+        if(n1>n2)
+        {
+            document.write(n1, "is the largest <br>")
+        }
+        else{
+            document.write(n2, "is the largest <br> <br>")
+        }
+        document.write("Program to find smallest among two numbers<br><br><br>")
+        let N1=4
+        let N2=8
+        if(N1<N2)
+        {
+            document.write(N1, "is the smallest <br>")
+        }
+        else{
+            document.write(N2, "is the smallest <br> <br>")
+        }
+
+        document.write("Program to check the given number is zero,positive and negative<br><br>")
+        let num=6
+        if(num==0){
+            document.write( num," is Zero<br>")
+        }
+        else if(num>0){
+            document.write( num," is positive<br>")
+        }
+        else{
+            document.write( num," is Negative<br>")
+        }
+    </script>
+
+</body>
+</html>
