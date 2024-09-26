@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <div> 
+        <h2>List of Cinemas</h2>
+        <ul id="list"></ul>
+    </div>
+    <div>
+        <h2>Select One</h2>
+        <select id="lang"></select>
+    </div>
+    <div id="button">
+
+    </div>
+    <div>
+        <select name="" id="cake"></select>
+    </div>
+    <script>
+        //Program to print a para about yourself using createElement() , textContent & append child. 
+        let element=document.createElement("p");
+        let element1=document.createElement("p");
+        element1.innerHTML="1) Program to print a para about yourself using createElement() , textContent & append child.<br>";
+        element.textContent="Myself krishna pushpan and i'm from ernkalum currently pursing blockchain in kerala blockchain academy in tvm.";
+        document.getElementById("mydiv").appendChild(element1);
+        document.getElementById("mydiv").appendChild(element); 
+        //Make an unordered list of cinemas on html page using javascript.
+        let question=document.createElement("p");
+        question.innerHTML="2) Make an unordered list of cinemas on html page using javascript.<br><br>";
+        document.getElementById("list").appendChild(question);
+
+        let cinemas= document.getElementById("list");
+            cinema1=document.createElement("li");
+            cinema1.textContent="bro daddy";
+            document.getElementById("list").appendChild(cinema1);
+
+        let cinema2=document.createElement("li");
+            cinema2.textContent="lucifer";
+            document.getElementById("list").appendChild(cinema2);
+
+        let cinema3=document.createElement("li");
+            cinema3.textContent="run baby run";
+            document.getElementById("list").appendChild(cinema3);
+
+        let cinema4=document.createElement("li");
+            cinema4.textContent="naran";
+            document.getElementById("list").appendChild(cinema4);
+//Create a dropdown for programming language classes offered on html page using javascript.
+document.write("3) Create a dropdown for programming language classes offered on html page using javascript.<br><br>")
+        let program= document.getElementById("lang");
+
+            let opt1=document.createElement("option");
+                opt1.value="1";
+                opt1.textContent="java";
+                program.appendChild(opt1);
+
+            let opt2=document.createElement("option");
+                opt2.value="2";
+                opt2.textContent="python";
+                program.appendChild(opt2);
+
+            let opt3=document.createElement("option");
+                opt3.value="3";
+                opt3.textContent="c++";
+                program.appendChild(opt3);
+                document.write("<br> <br>")
+//On the KBA site you created add a radio button showing your experience on KBA(like good, bad, average)
+document.write("4) On the KBA site you created add a radio button showing your experience on KBA(like good, bad, average)<br><br>")
+let but=document.getElementById("button")
+let rbutton1= document.createElement("input")
+rbutton1.type="radio";
+rbutton1.name="feed"
+but.appendChild(rbutton1)
+but.appendChild(document.createTextNode("good"));
+
+let rbutton2= document.createElement("input")
+rbutton2.type="radio";
+rbutton2.name="feed"
+but.appendChild(rbutton2)
+but.appendChild(document.createTextNode("average"));
+
+let rbutton3=document.createElement("input")
+rbutton3.type="radio"
+rbutton3.name="feed"
+but.appendChild(rbutton3)
+but.appendChild(document.createTextNode("bad"))
+
+//Create a dropdown for list of cakes and print the value of second option.
+document.write("6) Create a dropdown for list of cakes and print the value of second option.<br><br>")
+        let dropdown= document.getElementById("cake");
+
+let optionc1=document.createElement("option");
+optionc1.value="1";
+optionc1.textContent="chocolate cake";
+dropdown.appendChild(optionc1);
+
+let optionc2=document.createElement("option");
+optionc2.value="2";
+optionc2.textContent="white forest";
+dropdown.appendChild(optionc2);
+
+let optionc3=document.createElement("option");
+optionc3.value="3";
+optionc3.textContent="red velvet";
+dropdown.appendChild(optionc3);
+
+
+//Print your full name storing fname & lname. Print in Uppercase.
+document.write("7) Print your full name storing fname & lname. Print in Uppercase.<br><br>")
+        let name="krishna Pushpan"
+        document.write(name.toUpperCase(),"<br><br>")
+
+//“You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.
+document.write("8) “You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.<br><br>")
+        let str1="You can study";
+        let str2="You";
+        let str3="will";
+        let str4="do it";
+            str1=str1+" "+str2+ " "+str3+" "+str4
+        document.write( "combined sentence: ",str1, "<br><br>")
+
+//“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.
+    document.write("9) “MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.<br><br>")
+    let sentence="MongoDB is a decentralised distributed ledger. MongoDB can eliminate centralisation."
+    sentence=sentence.replace(/MongoDB/g,"Blockchain")
+    document.write(sentence,"<br><br>")
+
+//Compare “Hello World” & “hEllO World” and display the result & its type.
+document.write("10) Compare “Hello World” & “hEllO World” and display the result & its type.<br><br>")
+        let firststr1 = "Hello World";
+        let secstr2 = "hEllO World";
+        let compare = (firststr1 === secstr2);
+        document.write("comparison:", compare);
+        document.write("type :", typeof compare,"<br>");
+
+
+// Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.
+    document.write("11) Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.<br><br>")
+        let str = "MongoDB is a decentralised distributed ledger";
+        let part1 = str.substring(0, 7);   // "MongoDB"
+        let part2 = str.substring(7, 3);   // " is"
+        let part3 = str.substring(10, 2);  // " a"
+        let part4 = str.substring(12, 13); // " decentralised"
+        let part5 = str.substring(25, 12); // " distributed"
+        let part6 = str.substring(37);     // " ledger"
+        document.write(part1 + part2 + part3 + part4 + part5 + part6,"<br><br>");
+
+
+//Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).
+    document.write("12) Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).<br><br>")
+    let string1="My name is krishna pushpan.";
+    let string2="I live in Ernakulam."
+    // slice function
+    string1 = string1.slice(0, 11) + "KRISHNA PUSHPAN" + string1.slice(26);
+    document.write(string1, "<br><br>");
+    string2 = string2.slice(0, 10) + "ERNAKULAM" + string2.slice(19);
+    document.write(string2, "<br><br>");
+
+
+//Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
+document.write("13) Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.<br><br>")
+        let sen1 = "I like to play video games.";
+        let sen2 = "I don’t like Hide & seek.";
+        document.write("sentence1 : \t"+sen1,"<br><br>")
+        document.write("sentence2 : \t"+sen2,"<br><br>")
+        //replace function
+        sen1 = sen1.replace("like", "don't like");
+        sen2 = sen2.replace("like", "don't like");
+        document.write("changed sentence1 is "+sen1,"<br><br>")
+        document.write("changed sentence2 is "+sen2,"<br><br>")
+
+
+//Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
+document.write("14)Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.<br><br>")
+        let myage = 25;
+        let brotherage = myage + 10;
+        document.write(`I am ${myage} yrs of old and my brother is 10 yrs older to me. He is now ${brotherage} years old.<br><br>`);
+
+// Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+document.write("15)Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).<br><br>")
+
+let p1=30
+let p2=50
+let s= p1+p2;
+let sum =(s>=50 && s<=80)?65:80;
+document.write(sum,"<br><br>");
+// Program to find whether the person is eligible for voting using ternary operator
+document.write("16)Program to find whether the person is eligible for voting using ternary operator<br><br>")
+let age=19;
+eligible = (age>=18)?"eligible for voting ":" not eligible for voting "
+document.write(eligible,"<br><br><br>")
+document.write("activity set 2<br><br>")
+//Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+document.write("1) Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.<br><br>")
+let number=16;
+if(number%7==0 && number%3==0)
+document.write("<br>",number," is a multiple of 7 and 3<br><br>")
+else
+document.write(number," is a multiple of 7 and 3<br><br>")
+
+
+// Write a program using switch case to check the CGPA on given condition.
+// If the CGPA is 8 then print You got 8 CGPA.
+// If the CGPA is 10 then print You got 10 CGPA.
+// If the CGPA is 7 then print You got 7 CGPA.
+document.write("3)Write a program using switch case to check the CGPA on given condition.<br><br>")
+let N=10
+switch(N)
+{
+    case 10:
+        {
+            document.write(" You got 10 CGPA.<br>")
+            break;
+        }
+        case 8:
+        {
+            document.write(" You got 8 CGPA.<br>")
+            break;
+        }
+        case 7:
+        {
+            document.write(" You got 7 CGPA.<br>")
+            break;
+        }
+        default:{
+                document.write("Invalid number<br>")
+            }
+}
+document.write("<br>")
+// Write a program to print the month name by given number using switch
+document.write("4) Write a program to print the month name by given number using switch<br><br>")
+let month=12
+switch(month)
+{
+    case 1:
+        {
+            document.write(" January.<br>")
+            break;
+        }
+        case 2:
+        {
+            document.write(" February.<br>")
+            break;
+        }
+        case 3:
+        {
+            document.write(" March.<br>")
+            break;
+        }
+        case 4:
+        {
+            document.write(" April.<br>")
+            break;
+        }
+        case 5:
+        {
+            document.write(" May.<br>")
+            break;
+        }
+        case 6:
+        {
+            document.write(" June.<br>")
+            break;
+        }
+        case 7:
+        {
+            document.write(" july.<br>")
+            break;
+        }
+        case 8:
+        {
+            document.write(" August.<br>")
+            break;
+        }
+        case 9:
+        {
+            document.write(" september.<br>")
+            break;
+        }
+        case 10:
+        {
+            document.write(" October.<br>")
+            break;
+        }
+        case 11:
+        {
+            document.write(" November.<br>")
+            break;
+        }
+        case 12:
+        {
+            document.write(" December.<br>")
+            break;
+        }
+        default:{
+                document.write("invalid number<br>")
+            }
+}
+document.write("<br><br>")
+// Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
+// Temp < 0 then Freezing weather
+// Temp 0-10 then Very Cold weather
+// Temp 10-20 then Cold weather
+// Temp 20-30 then Normal in Temp
+// Temp 30-40 then Its Hot
+// Temp >=40 then Its Very Hot
+document.write("6) Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:<br><br>")
+let t = 38; 
+if (t < 0) {
+    document.write("Freezing weather");
+} else if (t >= 0 && t < 10) {
+    document.write("Very Cold weather");
+} else if (t >= 10 && t< 20) {
+    document.write("Cold weather");
+} else if (t >= 20 && t < 30) {
+    document.write("Normal in Temp");
+} else if (t >= 30 && t < 40) {
+    document.write("It's Hot");
+} else {
+    document.write("It's Very Hot");
+}
+
+
+    </script>
+</body>
+</html>

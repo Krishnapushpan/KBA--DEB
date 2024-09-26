@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("JAVASCRIPT<br><br>");
+        // for loop
+        for(i=1;i<=10;i++){
+            document.write("JAVASCRIPT<br>")
+           
+        }
+        document.write("print first 10 natural numbers<br><br>")
+        for(n1=1;n1<=10;n1++){
+            document.write(n1,"&nbsp;")
+        }
+        document.write("<br>print sum of first 10 natural numbers<br><br>")
+        let s=0;
+        for( let n=1;n<=10;n++){
+            s=s+n;
+        }
+        document.write(s ,"<br>")
+    //print first 10 even numbers using for
+        document.write("print first 10 even numbers<br><br>")
+        let n=0;
+        for(let i=0;i<10;i++){
+          n=n+2;
+            document.write(n,"&nbsp;");
+        }
+        //print first 10 even numbers using if condition
+        document.write("<br>print first 10 even numbers<br><br>")
+        for(let i=2;i<=20;i++){
+       if(i%2==0)
+            document.write(i,"&nbsp;");
+        }
+        // reverse using for loop
+        document.write("<br>reserve of a number using for loop<br><br>")
+        let s2=0;
+        n1=6789;
+        document.write("number = ",n1,"<br>")
+        for(;n1>0;n1=Math.floor(n1/10) ){
+            d=n1%10
+            s2=(s2*10)+d
+        }
+        document.write("reverse = ",s2)
+
+        //reverse using while loop 
+        document.write("<br>reserve of a number using while loop<br><br>")
+       
+        let s1=0;
+        n1=6789;
+        document.write("number = ",n1,"<br>")
+        while(n1>0){
+            d=n1%10
+            s1=(s1*10)+d
+            n1=Math.floor(n1/10) 
+        }
+        document.write("reverse = ",s1)
+    </script>
+</body>
+</html>
