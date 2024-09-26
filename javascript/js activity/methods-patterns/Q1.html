@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // From the list find the position of your favourite film
+        document.write("Enter a list/array of films you like<br><br>")
+        arr=["aaraattu","Bro daddy","drishyam2","lucifer","naran","pulimurugan","karma yodha"]
+        for(i=0;i<arr.length;i++)
+        {
+            document.write(arr[i],"<br>")
+        }
+        document.write("a)From the list find the position of your favourite film<br><br>")
+
+        fav = "naran"
+        position = arr.indexOf(fav)
+        document.write("Position of favourite film:",position,"<br><br>")
+       
+        document.write("<br>b. Add one more film to the list<br><br>") 
+          // add an element to the last of the array using push method
+          arr.push("natturajavu");
+          for(i=0;i<arr.length;i++)
+        {
+            document.write(arr[i],"<br>")
+        }
+        //c. Pop one film from the list
+        document.write("<br>c. Pop one film from the list<br><br>") 
+        arr.pop();
+        for(i=0;i<arr.length;i++)
+        {
+            document.write(arr[i],"<br>")
+        }
+
+        //d. Delete the least interested film from the list
+        document.write("<br>d. Delete the least interested film from the list<br><br>")
+        arr.splice(2,1) 
+        for(i=0;i<arr.length;i++)
+        {
+            document.write(arr[i],"<br>")
+        }
+
+        // c. Make a different list from 3rd position to 6th position
+        document.write("<br>e. Make a different list from 3rd position to 6th position<br><br>")
+
+        arr.splice(3,3,"Anveshanam","Mandakini","Padavettu") 
+        for(i=0;i<arr.length;i++)
+        {
+            document.write(arr[i],"<br>")
+        }
+        //d. Search whether "ARM" is on your list
+        document.write("<br><br>f. Search whether ARM is on your list<br><br>")
+        if(arr.includes("ARM"))
+        {
+            document.write("ARM film is on your list")
+        }
+        else {
+            document.write("ARM film is not on your list")
+        }
+        </script>
+</body>
+</html>

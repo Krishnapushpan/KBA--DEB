@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.write("sum of array using in and of<br><br>")
+        let a=[1,2,3,4]
+        // add an element to the last of the array using push method
+        a.push(5);
+        document.write("<br>",a ,"<br>")
+        // deletethe last element to the array using push method
+        a.pop();
+        document.write("<br>",a ,"<br>")
+        // to convert an array to string
+        let b=a.toString();
+        document.write("<br>",b[1] ,"<br>")
+        // to concatinate an array
+         c=[6,7,8,9,10,11,12]
+         let d=a.concat(c)
+         document.write("<br>",d ,"<br>")
+     //to add element at any location of array ,
+    //  syntax=name.splice(which position, no of element want to delete ,items want to add)
+         c.splice(2,0,2,3) 
+         document.write("<br>",c ,"<br>")
+         //divide an array into two
+         let k=c.slice(4)
+         document.write("<br>",k ,"<br>")
+         let k1=c.slice(4,6 )
+         document.write("<br>",k1 ,"<br>")
+         //array reverse
+         document.write("<br>",c.reverse() ,"<br>")
+         //array sort
+         document.write("<br>",c.sort() ,"<br>")
+         //to find the index of an element 
+         ind=c.indexOf(9)
+         document.write("<br>", ind,"<br>")
+        //  to append any to the element
+        document.write("<br>", c.join("*"),"<br>")
+
+    </script>
+</body>
+</html>
