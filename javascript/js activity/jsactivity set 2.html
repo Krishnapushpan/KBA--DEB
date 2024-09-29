@@ -130,6 +130,35 @@ switch(month)
             }
 }
 document.write("<br><br>")
+// Write a program to calculate the root of a quadratic equation.
+
+        document.write("5)Write a program to calculate the root of a quadratic equation.")
+        let a=4; b=6; c=2;
+        document.write("<br>The quadratic equation is : ",a, "x<sup>2</sup> + ",b, "x + ",c)
+
+        let d=(b*b) - (4*a*c)
+        document.write("<br><br> Discriminant :",d, "<br>")
+
+        if(d>0){
+            let r1=(-b) + (Math.sqrt(d)) / (2*a);
+            let r2=(-b) - (Math.sqrt(d)) / (2*a);
+            document.write("root1 :",r1, "<br>root2 :",r2)
+        }
+        else if(d==0){
+            let r1 = (-b) / (2*a);
+            let r2 = (-b) / (2*a);
+            document.write("<br> roots are real and identical : <br> root1 :".r1,"<br>root2 : ",r2)
+        }
+        else{
+            document.write("<br> roots are complex")
+        }
+        
+        document.write("<br><br>")
+   
+
+
+
+
 // Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
 // Temp < 0 then Freezing weather
 // Temp 0-10 then Very Cold weather

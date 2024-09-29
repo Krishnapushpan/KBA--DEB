@@ -135,7 +135,7 @@ document.write("10) Compare “Hello World” & “hEllO World” and display th
         let firststr1 = "Hello World";
         let secstr2 = "hEllO World";
         let compare = (firststr1 === secstr2);
-        document.write("comparison:", compare);
+        document.write("comparison:", compare,"<br>");
         document.write("type :", typeof compare,"<br>");
 
 
@@ -143,11 +143,11 @@ document.write("10) Compare “Hello World” & “hEllO World” and display th
     document.write("11) Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.<br><br>")
         let str = "MongoDB is a decentralised distributed ledger";
         let part1 = str.substring(0, 7);   // "MongoDB"
-        let part2 = str.substring(7, 3);   // " is"
-        let part3 = str.substring(10, 2);  // " a"
-        let part4 = str.substring(12, 13); // " decentralised"
-        let part5 = str.substring(25, 12); // " distributed"
-        let part6 = str.substring(37);     // " ledger"
+        let part2 = str.substring(7, 10);   // " is"
+        let part3 = str.substring(10, 12);  // " a"
+        let part4 = str.substring(12, 26); // " decentralised"
+        let part5 = str.substring(26, 38); // " distributed"
+        let part6 = str.substring(38);     // " ledger"
         document.write(part1 + part2 + part3 + part4 + part5 + part6,"<br><br>");
 
 

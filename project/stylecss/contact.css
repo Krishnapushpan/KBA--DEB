@@ -1,0 +1,186 @@
+/* contact starting */
+    
+.conmain{
+    height: 500px;
+    display: flex;
+    margin-left: 20px;
+}
+#conmain1{
+    background-color: #0a639e;
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 30%;
+    height: 470px;
+
+}
+#conmain3{
+    background-color: #0a639e;
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 30%;
+    height: 470px;
+}
+
+.carimg{
+    /* width:; */
+    height: 470px;
+}
+.carimg1{
+    /* width:380px; */
+    height: 470px;
+    /* outline: 6px solid white; */
+}
+
+
+#conmain2{
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 32%;
+    height: 470px;
+}
+
+#conmain2 h1{
+    font-family: "Shadows Into Light";
+    color: #1b4f85;
+    text-align: center;
+}
+.input1-group{
+    position: relative;
+    margin-left: 30px;
+}
+.input1{
+    padding: 10px;
+    /* background: #d3edf8; */
+    width:300px;
+    background-color: #eaf9fb;
+    border-radius: 4px;
+    outline: none;
+    color: #444444;
+    border: 1px solid #0da2ff;
+}
+.placeholder1{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #0da2ff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input1:focus + .placeholder1, .input1:not(:placeholder-shown) + .placeholder1{
+    top: -10px;
+    background-color: #eaf9fb;
+    /* background-color: #d3edf8;   */
+}
+/* second */
+.input2-group{
+    position: relative;
+    margin-left: 30px;
+}
+.input2{
+    padding: 10px;
+    /* background: #d3edf8; */
+    width:300px;
+    background-color: #eaf9fb;
+    border-radius: 4px;
+    outline: none;
+    color: #444444;
+    border: 1px solid #0da2ff;
+}
+.placeholder2{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #0da2ff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input2:focus + .placeholder2, .input2:not(:placeholder-shown) + .placeholder2{
+    top: -10px;
+    background-color: #eaf9fb;
+    /* background-color: #d3edf8;   */
+}
+.input3-group{
+    position: relative;
+    margin-left: 30px;
+}
+.input3{
+    padding: 10px;
+    /* background: #d3edf8; */
+    width:300px;
+    background-color: #eaf9fb;
+    border-radius: 4px;
+    outline: none;
+    color: #444444;
+    border: 1px solid #0da2ff;
+}
+.placeholder3{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #0da2ff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input3:focus + .placeholder3, .input3:not(:placeholder-shown) + .placeholder3{
+    top: -10px;
+    background-color: #eaf9fb;
+    /* background-color: #d3edf8;   */
+}
+.text4-group{
+    /* position: relative; */
+    margin-left: 30px;
+}
+.text4{
+    padding: 10px;
+    /* margin-top: -14px; */
+    /* background: #d3edf8; */
+    width:300px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #eaf9fb;
+    outline: none;
+    color: #0da2ff;
+    border: 1px solid #0da2ff;
+}
+.text4 .placeholder{
+    color: #0da2ff;
+}
+/* .placeholder4{
+    position: absolute;
+    margin-bottom: -35px;
+    left: 8px;
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #0da2ff;
+    transition: 0.3s;
+    pointer-events: none;
+} */
+/* .text4:focus + .placeholder4, .text4:not(:placeholder-shown) + .placeholder4{
+   top: -20px;
+    background-color: #eaf9fb;
+    background-color: #d3edf8;   */
+/* } */
+
+.sendbut button{
+    margin-left: 30px;
+    width: 320px;
+    height: 30px;
+    font-weight: bolder;
+    background-color: #eaf9fb;
+    border: 1px solid #0da2ff;
+    border-radius: 4px;
+    color: #0da2ff;
+}
+.sendbut button:hover{
+    background-color: #1b4f85;
+}
+
+/* contact ending */
