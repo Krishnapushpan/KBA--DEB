@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // creating an object 
+        let person={
+            name :'bob',
+            age:21,
+            city:'trivandrum',
+        // creating a function inside an object[greet is the key word]
+         greet: function(){
+            console.log('Hello my name is '+this.name)
+         }
+        }
+         console.log(person.name);
+         console.log(person.age);
+         console.log(person.city);
+        //  calling function 
+         person.greet();
+    </script>
+</body>
+</html>
