@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>this key word </h2>
+    <button onclick="showalert()">show alert</button>
+    <script>
+        console.log(this)
+        function showthis()
+    {
+        console.log(this);
+
+    }
+    showthis();
+    let person={
+        name:'bob',
+        greet: function(){
+            console.log("hello "+this.name)
+        }
+    };
+    person.greet();
+    let arrowgreet=()=>
+    {
+        console.log('arrow function this correct',this)
+    };
+    arrowgreet();
+function showalert(){
+    window.alert("hello from window object");
+}
+(function(){
+    console.log('functoin is immediately executed')
+})();
+    </script>
+</body>
+</html>

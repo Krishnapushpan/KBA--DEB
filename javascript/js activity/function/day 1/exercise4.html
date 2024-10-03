@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  id="useerInfo" action="">
+        <label for="">username: </label>
+        <input type="text" id="username" name="" min="0">
+        <button type="button" onclick="displaymessage()">submit</button>
+    </form>
+     <!-- <p id="message1"></p> -->
+    <p id="message"></p>
+   
+    <script>
+        // Define a function userInfo that accepts a username as a parameter and logs "Welcome,
+        //  [username]". Inside this function, define and immediately invoke another function
+        //   named displayMessage that logs "User [username] has logged in". Ensure that both
+        //    functions have access to the username variable.
+
+        function displaymessage(){
+            const user=document.getElementById('username').value;
+            const messagelement= document.getElementById('message')
+            function dis(){
+               messagelement.textContent=`Welcome, ${user}  .User ${user} has logged in`
+           
+            }
+            dis();
+        }
+        
+
+
+
+        // another way
+            // function displaymessage(){
+            // const user=document.getElementById('username').value;
+            // const user1=document.getElementById('username').value;
+            // const messagelement= document.getElementById('message')
+            // const messagelement1= document.getElementById('message1')
+            // function dis(){
+                // messagelement1.textContent= `welcome `+user1
+            //    messagelement.textContent=`Welcome, ${user}.User ${user} has logged in`
+            // }
+            // dis();
+            // }
+    </script>
+</body>
+</html>
