@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>task manager</h2>
+    <label  for="task">enter a task:</label>
+    <input type="text" id="task"><br>
+    <button onclick="addtask()">add task</button>
+    <ul id="taskls"></ul>
+<!-- Create a simple task manager. Allow users to input a task and add it to a list. Each task should display a "Remove"  -->
+<!-- button next to it. When clicked, the button should remove the task from the list. Additionally, implement an "Edit" -->
+ <!-- button for each task. Clicking the "Edit" button should replace the task text with an input field pre-filled with  -->
+ <!-- the current task text. After editing, clicking a "Save" button should update the task. -->
+  <script>
+    function addtask()
+    {
+       const taskinput=document.getElementById("task");
+       const tasklist=document.getElementById("taskls");
+
+        if(taskinput){
+            const li=document.createElement("li")
+            let tasktext=taskinput.value;
+            li.textContent = tasktext;
+//remove
+            removebutton=document.createElement("button")
+            removebutton.textContent="remove";
+            removebutton.onclick=function(){
+                tasklist.removeChild(li);
+            };
+//edit
+            editbutton=document.createElement("button");
+            editbutton.textContent="edit";
+
+            editbutton.onclick=function()
+            {
+            inputtext=document.createElement("input")
+            inputtext.type="text"
+             inputtext.value=tasktext
+
+             li.textContent='';
+             li.appendChild(inputtext);
+//save
+             savebutton= document.createElement("button")
+             savebutton.textContent='save';
+             savebutton.onclick=function()
+             {
+                tasktext= inputtext.value;
+                li.textContent=tasktext;
+                li.appendChild(removebutton);
+                li.appendChild(editbutton);
+             };
+             li.appendChild(savebutton);
+            
+            };
+
+           
+            li.appendChild(editbutton);
+            tasklist.appendChild(li)
+            taskinput.value=' ';
+            li.appendChild(removebutton);
+            tasklist.appendChild(li)
+            taskinput.value=' ';
+
+        }
+        }
+    
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

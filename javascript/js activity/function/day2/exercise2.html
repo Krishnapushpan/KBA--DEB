@@ -13,15 +13,20 @@
         // title, author, and year. Add a method getDetails that logs the book's details in the format 
         // "Title: [title], Author: [author], Year: [year]". Instantiate two books and log their 
         // details using the getDetails method.
-        // const person={
-        //     fullname: function(city, country){
-        //         console.log(this.firstname + " "+this.lastname+ "," + city+","+country);
-        //     }
-        // }
-        book={
-            
+       // Book constructor
+        function book(title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.getdetails = function() 
+        {
+        console.log(`Title: ${this.title}, Author: ${this.author}, Year: ${this.year}`);
+        };
         }
-
+        let book1 = new book(" mmmmmmm", "bob", 1967);
+        let book2 = new book("bbbbbbb", "john", 1955);
+        book1.getdetails();
+        book2.getdetails();
     </script>
 </body>
 </html>

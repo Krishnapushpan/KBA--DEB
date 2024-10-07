@@ -10,16 +10,14 @@
         // Define an arrow function greetLater that takes a parameter name and logs "Hello, [name]" 
         // after 2 seconds. Use setTimeout to delay the log. The arrow function should use the global 
         // this context. Explain why the this context behaves the way it does in an arrow function.
-person={
-    name: 'alice',
-    greetlater:()=> {
+    greetlater=(name)=> {
     setTimeout(()=>{
-        console.log('hello ',this.name)
+        console.log('hello ',name)
+        // console.log(this)
     },2000);
 }
- }
 
-person.greetlater();
+greetlater("kishna");
 //  greetlater(this.name);
     </script>
 </body>
