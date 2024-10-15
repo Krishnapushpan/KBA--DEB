@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #maindiv{
+            margin-top: 20px;
+            border: 3px solid black;
+            width: 500px;
+            /* line-height: 40px; */
+           
+            margin-left: 400px;
+        }
+        .maininput{
+            margin-left: 30px;
+            height: 30px;
+            width: 400px;
+        }
+        h1{
+            margin-left: 60px;
+        }
+        label{
+            margin-left: 30px;
+            font-size: 20px;
+        }
+        #mainbutton{
+            margin-top: 15px;
+            margin-left: 30px;
+            color: darkblue;
+            height: 30px;
+            width: 410px;
+        }
+        .complete{
+            text-decoration: line-through;
+        }
+        .complete1{
+            color:gray;
+        }
+        .high{color:red}
+        .medium{color:yellow}
+        .low{color: green;}
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <h1>Book Reading List Manager</h1>
+        <label for="">Book Name</label>
+        <br>
+        <input type="text"class="maininput" id="book">
+        <br>
+        <label for="">Reading priority (1-High, 2-Medium, 3-Low):</label>
+        <br>
+        <input type="number" class="maininput" id="priority">
+        <br>
+        <button id="mainbutton" onclick="addbook()"> Add Book</button>
+        <br>
+        <ul id="booklist"></ul>
+    </div>
+    <script>
+        books=[];
+        priorities=[];
+        
+        function addbook(){
+            const inputbook= document.getElementById("book");
+            const inputpriority=document.getElementById("priority") ;
+
+            let bookname=inputbook.value.trim();
+            let bookpriority= inputpriority.value.trim();
+            
+            if(inputbook!==""){
+
+                books.push(bookname);
+                priorities.push(bookpriority);
+
+                const li =document.createElement("li")
+                details= inputbook.value +"   "+ inputpriority.value ;
+                li.textContent=details;
+
+                switch(bookpriority){
+                    case '1': li.classList.add("high")
+                    break;
+                    case '2': li.classList.add("medium")
+                    break;
+                    case '3': li.classList.add("low")
+                    break;
+                }
+
+                // readedbutton
+                const readedbutton =document.createElement("button")
+                readedbutton.textContent='readed'
+                readedbutton.onclick= function(){
+                    li.classList.toggle("complete")
+                    li.classList.add("complete1")
+                }
+                li.appendChild(readedbutton)
+
+                //editbuuton
+                const editbutton= document.createElement("button")
+                editbutton.textContent="edit"
+                editbutton.onclick= function(){
+                    li.textContent=" ";
+                     
+                    const newbook = document.createElement("input")
+                    newbook.type='text'
+                    newbook.value=bookname;
+                    li.appendChild(newbook)
+                     // savebutton
+                const savebutton= document.createElement("button")
+                savebutton.textContent="save"
+                li.appendChild(savebutton)
+                savebutton.onclick= function(){
+                    details= newbook.value + " "+inputpriority.value;
+                    li.textContent=details
+                    
+                    inputbook.value="";
+                    inputpriority.value="";
+                    li.appendChild(readedbutton)
+                    li.appendChild(editbutton)
+                    li.appendChild(removebutton)
+                }
+                }
+                li.appendChild(editbutton)
+
+                // removebutton
+                const removebutton =document.createElement("button")
+                removebutton.textContent='remove'
+                removebutton.onclick= function(){
+                booklist.removeChild(li)
+                bookindex=names.indexOf(name)
+                names.splice(bookindex,1)
+                priorities.splice(bookindex,1)
+                }
+                li.appendChild(removebutton)
+                booklist.appendChild(li)
+            }
+        }
+    </script>
+</body>
+</html>

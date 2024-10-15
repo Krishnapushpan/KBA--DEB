@@ -20,7 +20,7 @@ function addexpense()
         categories.push(category);
 
         const li=document.createElement('li');
-        let descriptiontext=descriptioninput.value;
+        let descriptiontext=descriptioninput.value +" " + amountinput.value +" " + categoryinput.value ;
         li.textContent=descriptiontext;
 
         switch(category.toLowerCase())
