@@ -42,7 +42,7 @@ function askCommand(){
 }
 //function to add an item
 function addItemPrompt(){                          //nested functions
-    rl.question("Enter product id : ", function(id){     //callback fn
+    rl.question("Enter product id: ", function(id){     //callback fn
         rl.question("Enter product name: ",function(name){      //here both id& name are availabale
             rl.question("Enter product price: ",function(price){    
                 rl.question("Enter product quantity: ", function(quantity){
