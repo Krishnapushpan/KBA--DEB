@@ -1,0 +1,97 @@
+body{
+    background-image: url("/Lib.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+.header{
+    display: flex;
+    height: 80px;
+    background-color: black;
+/* background: rgba(37, 36, 36, 0.2); */
+/* backdrop-filter:blur(2px) ; */
+/* border-radius: 20px; */
+
+}
+.subnav{
+color: white;
+font-size: 22px;
+margin-right: 20px;
+text-decoration: none;
+padding: 30px;
+margin-top: 90px;
+
+}
+/* h1{
+    color: white;
+    text-align: center;
+    font-size: 34;
+}
+table{
+
+   border:3px solid black;
+   margin-left:30px;
+     width:500px; 
+      height:600px;
+}
+form{
+    margin-left:350px;
+    margin-top:30px;
+    background-color:#fdedec ;
+      border-radius: 5%;
+      height: 650px; 
+      width :550px ;
+} */
+.submain
+{
+    
+    display: flex;
+    margin-top: 10px;
+    margin: 50px;
+}
+.main1{
+    border-radius: 22px;
+    height: 2000px;
+    width: 800px;
+    margin-left:250px ;
+    background-color: rgb(240, 225, 225);
+}
+p{
+    margin-left: 10px;
+    font-size: 25px;
+    color: rgb(55, 55, 82);
+}
+.g1
+{
+    border: 5px solid white;
+    border-radius: 25px;
+    height:200px;
+    width: 200px;
+    margin-left: 20px;
+}
+ h1{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(43, 29, 77);
+
+}
+/* div p{
+    height: 100px;
+    width: 400px;
+    text-align: center;
+} */
+input
+{
+        background-color:rgb(88, 110, 117);
+        border-style: none;
+        padding: 25px;
+        font-size: 20px;
+        color: white;
+        border-radius: 20px;
+        margin-left: 220px;
+}
+.heading{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}

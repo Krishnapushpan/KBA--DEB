@@ -1,0 +1,111 @@
+body{
+    background-image: url("/lib.jpg");
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainav{
+    display: flex;
+}
+.first{
+    display: flex;
+}
+.liara{
+        font-family: "WindSong", cursive;
+        font-weight:bolder;
+        font-style:normal;
+        color:whitesmoke;
+        font-size: 70px;
+        margin-top: 10px;
+      }
+      .sec{
+        font-family: "WindSong", cursive;
+        font-weight:bolder;
+        color:whitesmoke;
+        margin-top: 50px;
+        font-size: 20px;
+        margin-left: 50px;
+
+      }
+.divnav{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+      nav a{
+  
+        text-decoration: none;
+        color: whitesmoke;
+      
+        font-size: 20px;
+        margin-left: 30px;
+        font-weight: bolder;
+      }
+      nav a:hover{
+      color: rgb(224, 151, 124);
+
+      }
+      .main{
+        display: flex;
+        margin-left: 70px;
+      }
+      .main1{
+        margin-right: 30px;
+        border: 2px solid wheat ;
+        border-radius: 32px;
+        background-color: rgb(194, 170, 142);
+        height: 750px;
+        width: 550px;
+      }
+      .main2{
+        margin-right: 30px;
+        border: 2px solid wheat ;
+        border-radius: 32px;
+        background-color: rgb(194, 170, 142);
+        height: 750px;
+        width: 550px;
+      }
+      .submain{
+        display: flex;
+        margin: 30px;
+     
+      }
+.g1{
+    height: 150px;
+    width: 100px;
+}
+.subf{
+    width: 180px;
+}
+.sub2{
+    width: 320px;
+}
+h2{
+    color: whitesmoke;
+}
+p{
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    font-size: 25px;
+    color: whitesmoke;
+    text-align: center;
+}
+.but{
+    /* margin-left: 100px;
+    margin-top: 20px; */
+    height: 35px;
+    width: 200px;
+    border: 2px solid whitesmoke;
+    border-radius: 42px;
+    color:rgb(90, 88, 88);
+    font-weight: bolder;
+}
+.but:hover{
+    background-color: rgb(223, 222, 179);
+        border: 2px solid whitesmoke;
+}
+h1{
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: center;
+}
