@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <label for="">Enter side of square</label> <input id="inputside" type="text" placeholder="enter the side "><br>
+    <button onclick="square()">area of sqaure</button>
+    <div id="squarediv"></div>
+</div>
+<br>
+<div>
+    <label for="">Enter length</label> <input id="inputlength" type="text" placeholder="enter the length "><br>
+    <label for="">Enter breadth</label> <input id="inputbreadth" type="text" placeholder="enter the breadth "><br>
+
+    <button onclick="rectangle()">area of rectangle</button>
+    <div id="rectanglediv"></div>
+</div><br>
+<div></div>
+    <label for="">Enter the radius</label> <input id="inputradius" type="text" placeholder="enter the radius "><br>
+    <button onclick="circle()">area of circle</button>
+    <div id="circlediv"></div>
+</div>
+
+<script>
+    function square(){
+        const square =document.getElementById("squarediv");
+        const side= parseFloat(document.getElementById("inputside").value);
+        const areas= side*side;
+        square.textContent=`The area of the Square = ${areas}`;
+    }
+    function rectangle(){
+        const rectangle =document.getElementById("rectanglediv");
+        const length =parseFloat(document.getElementById("inputlength").value);
+        const breadth =parseFloat(document.getElementById("inputbreadth").value);
+        const area = length*breadth;
+        rectangle.textContent=`The area of the Rectangle = ${area}`;
+    }
+      function circle(){
+        const circle =document.getElementById("circlediv");
+        const radius= parseFloat(document.getElementById("inputradius").value);
+        const areas= 3.14*radius*radius;
+        circle.textContent=`The area of the circle = ${areas}`;
+    }
+</script>
+</body>
+</html> 

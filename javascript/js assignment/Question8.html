@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">enter subject</label>
+        <input type="text"id= "sub"><br>
+        <label for="">enter mark</label>
+        <input type="text"id= "mark"><br>
+        <button onclick="add()">add mark</button><button onclick="grade()">grade</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        subjects =[];
+        marks=[];
+
+        function add(){
+            const subject =document.getElementById("sub").value;
+            const mark =parseInt(document.getElementById("mark").value);
+            if(subject){
+                subjects.push(subject);
+            }
+            if(!isNaN(mark)){
+                marks.push(mark);
+            }
+            document.getElementById("sub").value="";
+            document.getElementById("mark").value="";
+        }
+        function grade(){
+        const resultdiv =document.getElementById("result");
+        let sum=0;
+            let markmax=100;
+            if(marks.length>0){
+                for(i=0;i<marks.length;i++){
+                   sum =sum+ marks[i];
+                }
+               let total =marks.length * markmax;
+               let  per = (sum/total)*100;
+            //    resultdiv.textContent = `the percentage of marks is ${per}`;
+            if(per>90)
+            resultdiv.textContent = `grade is A+`;
+            else if(90>per>80)
+            resultdiv.textContent = `grade is A`;
+            else if(80>per>70)
+            resultdiv.textContent = `grade is B+`;
+            else if(70>per>60)
+            resultdiv.textContent = `grade is C+`;
+            else
+            resultdiv.textContent = `grade is C`;
+            }
+            
+        }
+</script>
+</body>
+</html>

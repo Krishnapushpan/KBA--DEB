@@ -1,9 +1,11 @@
 import { json, Router } from "express";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { authenticate } from "../middleware/auth.js";
 
 const admin=Router();
 
+const addcourse =new Map();
 const user = new Map();
 const secretkey = "hello";
 
@@ -34,7 +36,7 @@ admin.post('/signup',async(req,res)=>{
         res.status(500).json(error);
     }
 })  
-
+// login part
 admin.post('/login',async(req,res)=>{
 
 const{username,password}=req.body;
@@ -59,7 +61,87 @@ else{
 }
 
 })
+// add course
+admin.post('/addcourse',authenticate,(req,res)=>{
+  try{
+    const data = req.body;
+   const {courseid,coursename, coursetype,description}= data;
+    const role =req.userrole;
+    // const admin= "admin";
+            if(role!== "admin"){
 
+            res.send("you have no permission")
+            }
+            else{
+                if(addcourse.has(courseid)){
+                    res.status(201).json({message:"course already added"})
+                }
+                else{
+                    addcourse.set(courseid,{courseid,coursename, coursetype,description});
+                    console.log(addcourse.get(courseid));
+                    console.log("data saved");
+                    res.status(201).json({message:"data saved"})
+                    
+                }
+            }
+    }
+    catch(error){
+        res.status(500).json(error);
+    }
+})
 
+// update course
 
+admin.post('/update',authenticate,(req,res)=>{
+    try{
+      const data = req.body;
+     const {courseid,newcoursename,newcoursetype,newdescription}= data;
+      const role =req.userrole;
+      // const admin= "admin";
+              if(role!== "admin"){
+  
+              res.send("you have no permission")
+              }
+              else{ 
+                  if(addcourse.has(courseid)){
+                    //   res.status(201).json({message:"course already added"})
+                    addcourse.set(courseid,{courseid,newcoursename,newcoursetype,newdescription});
+                    console.log(addcourse.get(courseid));
+                    console.log("data updated");
+                    res.send("data updated")
+                  }
+                  else{
+                      
+                    res.send("this course not exist")
+                  }
+              }
+      }
+      catch(error){
+          res.status(500).json(error);
+      }
+  })
+
+ //view
+ admin.post('/view',(req,res)=>{
+    try{
+      const data = req.body;
+     const {courseid}= data;
+      
+                  if(addcourse.has(courseid)){
+                     console.log("view data");
+                    // addcourse.set(courseid,{courseid,newcoursename,newcoursetype,newdescription});
+                    console.log(addcourse.get(courseid));
+                   
+                    // res.send("data updated")
+                  }
+                  else{
+                      
+                    res.send("this course not exist")
+                  }
+                }
+      catch(error){
+          res.status(500).json(error);
+      }
+  })
+ 
 export {admin};
