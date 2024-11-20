@@ -6,6 +6,35 @@
 <title>view</title>
 <!-- <link rel="stylesheet" href="stylecss/viewcerti.css"> -->
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+     
+
+            window.onload = function() {
+        // Get the candidate name from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const candidatename = urlParams.get("name");
+
+        // Retrieve certificates from local storage
+        let certificates = JSON.parse(localStorage.getItem("certificates")) || [];
+
+        // Find the certificate matching the candidate name
+        const certificate = certificates.find(cert => cert.candidatename === candidatename);
+
+        if (certificate) {
+            // Display certificate details
+            document.getElementById("candidatename").innerHTML = certificate.candidatename;
+            document.getElementById("coursename").innerHTML = certificate.coursename;
+            document.getElementById("selectgrade").innerHTML = certificate.selectgrade;
+            document.getElementById("issuedate").innerHTML = certificate.issuedate;
+        } 
+        // else {
+        //     // Redirect if no certificate found
+        //     alert("noooooooooooo");
+        //     window.location.href = "frontpage.html";
+        // }
+    };
+</script>
+</script>
 </head>
 <body class="bg-gray-300" >
 
@@ -20,13 +49,13 @@
         <img  class="w-40 h-40" src="course.png" alt="" > 
     </div>
     <div class="text-center mt-4">
-        <p>This is certify that <b>n</b></p>
+        <p>This is certify that <b id="candidatename"></b></p>
     </div>
     <div class="text-center mt-4">
-        <p> has successfully completed <b>Blockchain Foundation</b></p>
+        <p> has successfully completed <b id="coursename"></b></p>
     </div>
     <div  class="text-center mt-4">
-    <p>with <b>S</b> on 2024-08-07</p>
+    <p>with <b id="selectgrade"></b>with on<b id="issuedate"></b></p>
     </div>
 </div>
     </div>

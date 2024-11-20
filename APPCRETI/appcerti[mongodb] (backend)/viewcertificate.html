@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View Certificate</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    window.onload = async () => {
+    // Retrieve the candidate ID from localStorage
+    const candidateid = localStorage.getItem("candidateid");
+    console.log("Candidate ID from localStorage:", candidateid);
+
+    if (!candidateid) {
+        alert("No certificate ID found. Please try again.");
+        window.location.href = 'frontpage.html';
+        return;
+    }
+
+    try {
+        // Fetch certificate details using candidate ID
+        const response = await fetch(`http://127.0.0.1:8000/viewcertificate?candidateid=${candidateid}`, {
+            method: "GET",
+            credentials: "include",
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log("Fetched Certificate Data:", data);
+
+            // Populate the certificate details in HTML elements
+            document.getElementById("candidatename").textContent = data.candidatename || "Not Available";
+            document.getElementById("coursename").textContent = data.coursename || "Not Available";
+            document.getElementById("selectgrade").textContent = data.selectgrade || "Not Available";
+            document.getElementById("issuedate").textContent = data.issuedate || "Not Available";
+        } else {
+            alert("Failed to fetch certificate data. Redirecting back to the search page.");
+            window.location.href = 'frontpage.html';
+        }
+    } catch (error) {
+        console.error("Error fetching certificate:", error);
+        alert("An error occurred while fetching the certificate.");
+        window.location.href = 'frontpage.html';
+    }
+};
+
+</script>
+</head>
+<body class="bg-gray-300">
+
+    <div class="border bg-slate-100 border-slate-400 w-9/12 ml-44 p-8 mt-14"> 
+        <div class="border border-slate-400 bg-slate-100 w-9/12 ml-32 mt-10">
+            <div class="text-center">
+                <h2>Kerala Blockchain Academy</h2>
+            </div>
+            <div class="flex justify-center items-center mt-12">
+                <img class="w-40 h-40" src="course.png" alt="Certificate Logo"> 
+            </div>
+            <div class="text-center mt-4">
+                <p>This is to certify that <b id="candidatename"></b></p>
+            </div>
+            <div class="text-center mt-4">
+                <p>has successfully completed <b id="coursename"></b></p>
+            </div>
+            <div class="text-center mt-4">
+                <p>with a grade of <b id="selectgrade"></b> on <b id="issuedate"></b></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Roll Number Tracker</title>
+  <title>Document</title>
 </head>
 <body>
 <div>
@@ -30,7 +30,7 @@
         if(name){
 
             namearray.push(name);
-            const option= document.getElementById("nameoption")
+            // const option= document.getElementById("nameoption")
             const  newoption = document.createElement("option")
             newoption.textContent= `${namearray.length }`;
             newoption.value = namearray.length; 
@@ -40,9 +40,8 @@
         document.getElementById("inputname").value ="";
     }
     function displayname(){
-        // const result =document.getElementById("result")
+     
         const  numoption =document.getElementById("nameoption")
-        // const  rollnum =document.getElementById("nameoption")
         const  number =parseInt(numoption.value);
         if(number!=="")
         {
