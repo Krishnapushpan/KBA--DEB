@@ -183,7 +183,11 @@ admin.get('/viewuser',authenticate,(req,res)=>{
         res.status(404).json({message:'user not authorized'});
     }
   })
-
+  admin.post('/logout',(req,res)=>{
+    res.clearCookie('bookdet');
+    res.status(200).json('logout  successfully');
+    console.log("logout  successfully");
+   })
 
 
 export {admin};

@@ -17,7 +17,7 @@ const App = () => {
     <>
     {/* public routes */}
     <Route path="/" element={<LoginPage />}/>
-    <Route path="/Signup" element={<SignupPage />}/>''
+    <Route path="/Signup" element={<SignupPage />}/>
       {/* protected Routes */}
       <Route element={<AuthLayout/>}>
       <Route element={<MainLayout/>}>

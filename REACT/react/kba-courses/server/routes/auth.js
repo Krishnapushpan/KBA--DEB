@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// User login
+// User login+
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -34,32 +34,18 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ email });
     console.log(user, "user");
     if (!user) {
-      return res
-        .status(401)
-        .json({ error: "Authentication failed- User doesn't exists" });
+      return res.status(401).json({ error: "Authentication failed- User doesn't exists" });
     }
 
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (!passwordMatch) {
-      return res
-        .status(401)
-        .json({ error: "Authentication failed- password doesn't match" });
+      return res.status(401).json({ error: "Authentication failed- password doesn't match" });
     }
 
-    const token = jwt.sign(
-      { userId: user._id, userType: user.userType },
-      "your-secret-key",
-      {
-        expiresIn: "1h",
-      }
-    );
+    const token = jwt.sign({ userId: user._id, userType: user.userType },"your-secret-key",{expiresIn: "1h",});
 
     res.cookie("Authtoken", token);
-    res.json({
-      status: true,
-      message: "login success",
-      userType: user.userType
-    });
+    res.json({status: true,message: "login success",userType: user.userType});
     //  console.log('/login in the bakend res', res)
     return res;
   } catch (error) {
