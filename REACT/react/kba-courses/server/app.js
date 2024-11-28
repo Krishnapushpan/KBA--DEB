@@ -7,7 +7,7 @@ const auth =require("./routes/auth")
 
 app.use(
   cors({ 
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3001",
   })
 );
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use("/", routes);
 app.use("/", auth);
 
-const PORT = 5000;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
